@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: milko-service
+  labels:
+    app: milko-devops-project
+spec:
+  selector:
+    app: milko-devops-project
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31200
